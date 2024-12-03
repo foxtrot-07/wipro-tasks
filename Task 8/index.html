@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <form id="multiStepForm">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <!-- Step 1: Personal Information -->
+      <div class="form-step" id="step1">
+        <h2>Step 1: Personal Information</h2>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <button type="button" id="next1">Next</button>
+      </div>
+
+      <!-- Step 2: Contact Information -->
+      <div class="form-step" id="step2">
+        <h2>Step 2: Contact Information</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <button type="button" id="prev2">Previous</button>
+        <button type="button" id="next2">Next</button>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="form-step" id="step3">
+        <h2>Step 3: Confirmation</h2>
+        <p>Review your details before submitting:</p>
+        <ul>
+          <li><strong>First Name:</strong> <span id="confirmFirstName"></span></li>
+          <li><strong>Last Name:</strong> <span id="confirmLastName"></span></li>
+          <li><strong>Email:</strong> <span id="confirmEmail"></span></li>
+          <li><strong>Phone:</strong> <span id="confirmPhone"></span></li>
+        </ul>
+        <button type="button" id="prev3">Previous</button>
+        <button type="submit" id="submitForm">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
